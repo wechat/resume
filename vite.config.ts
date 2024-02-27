@@ -21,9 +21,7 @@ export default defineConfig({
       ],
     }),
   ],
-  build: {
-    assetsDir: "./assets",
-  },
+  base: process.env.NODE_ENV === 'production' ? 'resume-web' : './',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
