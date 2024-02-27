@@ -42,6 +42,11 @@ jobs:
         run: npm install -g pnpm
       - name: Install pkg
         run: pnpm install
+      - name: build
+        run: pnpm build
+      # 查看打包后的目录文件
+      - name: view directory files
+        run: ls -a
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
