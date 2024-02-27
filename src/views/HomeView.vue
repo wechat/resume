@@ -47,12 +47,18 @@ function handleCancel() {
     @before-ok="handleBeforeOk"
   >
     <a-input v-model="code" />
+    <p class="tips">使用chrome浏览器体验更好</p>
   </a-modal>
 </template>
 
 <style lang="scss" scoped>
 main {
   padding: 30px;
+}
+.tips {
+  padding-top: 10px;
+  color: #666;
+  font-size: 12px;
 }
 </style>
 <style>
