@@ -3,8 +3,7 @@ import { ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import Message from '@arco-design/web-vue/es/message'
 import { useResumeStore } from '@/stores/resume'
-import ResumeHead from '@/components/ResumeHead.vue'
-import ResumeItem from '@/components/ResumeItem.vue'
+
 const store = useResumeStore()
 const { resumeData } = storeToRefs(store)
 const code = ref('')
