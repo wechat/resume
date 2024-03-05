@@ -10,7 +10,7 @@ defineProps<{
     <template v-if="data?.list[0]?.list">
       <div class="list" v-for="(item, index) in data.list" :key="index">
         <div class="item">
-          <h3>{{ item.name }}</h3>
+          <h3 v-html="item.name"></h3>
           <div class="time" v-html="item.time"></div>
         </div>
         <ul>
@@ -19,7 +19,7 @@ defineProps<{
       </div>
     </template>
     <ul v-else>
-      <li v-for="(item, index) in data?.list" :key="index">{{ item }}</li>
+      <li v-for="(item, index) in data?.list" :key="index" v-html="item"></li>
     </ul>
   </section>
 </template>
