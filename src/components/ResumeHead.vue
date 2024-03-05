@@ -29,7 +29,7 @@ defineProps<{
 
 <style lang="scss" scoped>
 header {
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   text-align: center;
   h1 {
     margin: 0;

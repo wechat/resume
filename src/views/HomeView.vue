@@ -53,7 +53,7 @@ function handleCancel() {
 <style lang="scss" scoped>
 main {
   overflow: hidden;
-  padding: 30px;
+  padding: 20px 30px 30px;
   box-sizing: border-box;
 }
 .tips {

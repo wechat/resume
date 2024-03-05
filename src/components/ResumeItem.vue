@@ -35,13 +35,13 @@ defineProps<{
 
 <style lang="scss" scoped>
 section {
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   &:last-child {
     margin-bottom: 0;
   }
   h2 {
-    margin-bottom: 10px;
-    padding-bottom: 6px;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
     font-size: 17px;
     border-bottom: 2px solid #000;
   }
@@ -52,7 +52,7 @@ section {
   ul {
     li {
       position: relative;
-      margin: 8px 0 0 18px;
+      margin: 6px 0 0 18px;
       font-size: 14px;
       line-height: 1.3;
       word-break: break-all;
