@@ -60,7 +60,7 @@ section {
         display: flex;
         justify-content: flex-start;
         .label {
-          min-width: 70px;
+          min-width: 72px;
           flex-shrink: 0;
           font-weight: bold;
         }
