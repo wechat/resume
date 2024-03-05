@@ -34,6 +34,8 @@ a:hover {
   color: #000;
 }
 
-@page {
-  margin: 20px 0;
+@media print {
+   @page {
+    margin: 20px 0;
+  }
 }

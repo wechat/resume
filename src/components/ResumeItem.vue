@@ -10,11 +10,20 @@ defineProps<{
     <template v-if="data?.list[0]?.list">
       <div class="list" v-for="(item, index) in data.list" :key="index">
         <div class="item">
-          <h3 v-html="item.name"></h3>
+          <div class="item-left">
+            <h3 v-html="item.name"></h3>
+            <p>{{ item.post }}</p>
+          </div>
           <div class="time" v-html="item.time"></div>
         </div>
         <ul>
-          <li v-for="(_item, _index) in item.list" :key="_index" v-html="_item"></li>
+          <li v-for="(_item, _index) in item.list" :key="_index">
+            <div class="text" v-if="_item?.label && _item?.content">
+              <div class="label">{{ _item.label }}</div>
+              <div v-html="_item.content"></div>
+            </div>
+            <div v-else v-html="_item"></div>
+          </li>
         </ul>
       </div>
     </template>
@@ -47,6 +56,15 @@ section {
       font-size: 14px;
       line-height: 1.3;
       word-break: break-all;
+      .text {
+        display: flex;
+        justify-content: flex-start;
+        .label {
+          min-width: 70px;
+          flex-shrink: 0;
+          font-weight: bold;
+        }
+      }
     }
   }
   .list {
@@ -58,10 +76,31 @@ section {
       display: flex;
       align-content: center;
       justify-content: space-between;
+      flex-shrink: 0;
       padding: 8px 0 4px;
       line-height: 1;
+      &-left {
+        display: flex;
+        p {
+          margin-left: 10px;
+          padding-top: 1px;
+        }
+      }
       .time {
-        padding-top: 3px;
+        padding-top: 2px;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .list {
+      .item {
+        &-left {
+          display: block;
+          p {
+            margin-left: 0;
+            padding-top: 10px;
+          }
+        }
       }
     }
   }
