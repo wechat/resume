@@ -8,7 +8,7 @@ const store = useResumeStore()
 const { resumeData } = storeToRefs(store)
 const code = ref('')
 const visible = ref(true)
-const resumeList = ref(['info', 'skill', 'opensource', 'work', 'xedu', 'intro'])
+const resumeList = ref(['info', 'skill', 'work', 'project', 'opensource', 'xedu', 'intro'])
 
 async function getInfo(code?: string) {
   await store.getResumeData(code || '')

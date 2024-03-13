@@ -13,15 +13,15 @@ defineProps<{
       <span>{{ data.city }}</span>
     </p>
     <p class="default">
-      <span>{{ data.work_time }}</span>
       <span>{{ data.position_applied }}</span>
+      <span>{{ data.work_time }}</span>
     </p>
     <div class="other">
       <p>
-        <span>{{ data.work_time }}</span>
+        <span>{{ data.position_applied }}</span>
       </p>
       <p>
-        <span>{{ data.position_applied }}</span>
+        <span>{{ data.work_time }}</span>
       </p>
     </div>
   </header>
